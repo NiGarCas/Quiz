@@ -6,6 +6,7 @@
 package quizpoo;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
@@ -17,8 +18,8 @@ public class Main {
         Scanner entradaConsola = new Scanner (System.in);
         WebGallery wg = new WebGallery();
         try{
-            File datos = new File("datos/datos.txt");
-            Scanner x = new Scanner(datos); 
+            File archivo = new File("datos.txt");
+            Scanner x = new Scanner(archivo); 
             x.useDelimiter(",");
             while(x.hasNext()){
                 String nombre =x.next();
@@ -28,14 +29,16 @@ public class Main {
                     String nombreObra = x.next();
                     String estilo = x.next();
                     String tecnica = x.next();
-                    double valor = x.nextDouble();
+                    int valor = x.nextInt();
                     Obra obra = new Obra(nombreObra,estilo,tecnica,valor);
                     artista.agregarObra(obra);
                 }
                 wg.agregarArtista(artista);
             }
-        }catch(Exception E){
+        }catch(FileNotFoundException e1){
             System.out.println("No se encontro archivo con el nombre seleccionado para cargar informacion");
+        }catch(InputMismatchException e2){
+            System.out.println("e2");
         }
         int continuar = 0;
         do{
@@ -46,7 +49,8 @@ public class Main {
         System.out.println("2. Calcular el valor de todas las obras");
         System.out.println(" ");
         try{
-            int opcion = entradaConsola.nextInt();
+            int opcion = 0;
+            opcion = entradaConsola.nextInt();
             if (opcion == 1){
                 System.out.println("Ingrese el nombre del autor cuyas obras quiere revisar:");
                 String autor = entradaConsola.next();
@@ -64,7 +68,8 @@ public class Main {
                 System.out.println("Opcion no disponible");
             }
         }catch (Exception w){
-            System.out.println("Opcion no disponible, intente nuevamente");
+            System.out.println("Recuerde que la opción escogida debe ser un número (1 o 2)");
+            System.out.println("Intente nuevamente");
         }
         }while(continuar == 0);
     }

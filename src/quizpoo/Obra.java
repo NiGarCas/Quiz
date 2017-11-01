@@ -15,7 +15,7 @@ public class Obra {
     private String tecnica;
     private double valor;
 
-    public Obra(String nombre, String estilo, String tecnica, double valor) {
+    public Obra(String nombre, String estilo, String tecnica, int valor) {
         this.nombre = nombre;
         this.estilo = estilo;
         this.tecnica = tecnica;

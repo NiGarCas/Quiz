@@ -1,9 +1,9 @@
-Pablo Picasso, 3
-Paisaje mediterraneo, Cubismo, Oleo, 69
-Desnudo y Narturaleza Muerta, Modernismo, Oleo,78
-El Descanso, Modernismo, Oleo, 65
-Vincent van Gogh, 2
-Los Girasoles, Postimpresionismo, Oleo,378
-La Noche Estrellada, Postimpresionismo, Oleo,387
-Claude Monet, 1
+PabloPicasso, 3
+Paisajemediterraneo, Cubismo, Oleo, 69
+DesnudoyNarturalezaMuerta, Modernismo, Oleo,78
+ElDescanso, Modernismo, Oleo, 65
+VincentvanGogh, 2
+LosGirasoles, Postimpresionismo, Oleo,378
+LaNocheEstrellada, Postimpresionismo, Oleo,387
+ClaudeMonet, 1
 Jardin de Vetheuil, Impresionismo, Oleo,131
